@@ -162,7 +162,7 @@ def resolve_icon(icon_name: str):
     if is_windows:
         path, extension = os.path.splitext(base_path)
         ico_file = path + ".ico"
-        #assert os.path.exists(ico_file), f"ico counterpart of {base_path} should exist."
+        assert os.path.exists(ico_file), f"ico counterpart of {base_path} should exist."
         return ico_file
     else:
         return base_path
@@ -172,7 +172,7 @@ exes = [
     cx_Freeze.Executable(
         script=f'{c.script_name}.py',
         target_name=c.frozen_name + (".exe" if is_windows else ""),
-        icon=resolve_icon(c.icon),
+        #icon=resolve_icon(c.icon),
         base="Win32GUI" if is_windows and not c.cli else None
     ) for c in components if c.script_name and c.frozen_name
 ]
