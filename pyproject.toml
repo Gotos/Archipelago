@@ -13,11 +13,23 @@ build-backend = "hatchling.build"
 "." = "archipelago"
 
 [tool.hatch.build.targets.wheel]
-only-include = ["."]
+packages = ["."]
 exclude = [
   "/.github",
   "/docs",
-  "/data"
+  "/data",
+  "**/test/**",
+  "/setup.py",
+  "/.gitignore",
+  "/LICENSE",
+  "/WebHostLib",
+  "*.yaml",
+  "*.yml",
+  "*.ini",
+  "*.toml",
+  "*.txt",
+  "*.md",
+  "*.iss"
 ]
 
 [tool.hatch.build.targets.sdist]
