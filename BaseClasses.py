@@ -11,9 +11,9 @@ from collections import ChainMap, Counter, deque
 from enum import IntEnum, IntFlag
 from typing import Any, Callable, Dict, Iterable, Iterator, List, NamedTuple, Optional, Set, Tuple, TypedDict, Union
 
-import NetUtils
-import Options
-import Utils
+from . import NetUtils
+from . import Options
+from . import Utils
 
 
 class Group(TypedDict, total=False):
