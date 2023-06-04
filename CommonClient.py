@@ -498,7 +498,7 @@ class CommonContext:
         if not self.ui:
             return None
         title = title or "Error"
-        from kvui import MessageBox
+        from .kvui import MessageBox
         if self._messagebox:
             self._messagebox.dismiss()
         # make "Multiple exceptions" look nice
@@ -523,7 +523,7 @@ class CommonContext:
 
     def run_gui(self):
         """Import kivy UI system and start running it as self.ui_task."""
-        from kvui import GameManager
+        from .kvui import GameManager
 
         class TextManager(GameManager):
             logging_pairs = [
