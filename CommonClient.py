@@ -25,7 +25,7 @@ from .worlds import network_data_package, AutoWorldRegister
 import os
 
 if typing.TYPE_CHECKING:
-    import kvui
+    from . import kvui
 
 logger = logging.getLogger("Client")
 
