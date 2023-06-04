@@ -8,7 +8,7 @@ import typing
 import random
 
 from schema import Schema, And, Or, Optional
-from Utils import get_fuzzy_results
+from .Utils import get_fuzzy_results
 
 if typing.TYPE_CHECKING:
     from BaseClasses import PlandoOptions
