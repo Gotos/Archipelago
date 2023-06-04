@@ -12,7 +12,7 @@ ModuleUpdate.update()
 
 import websockets
 
-import Utils
+from . import Utils
 
 if __name__ == "__main__":
     Utils.init_logging("TextClient", exception_logger="Client")

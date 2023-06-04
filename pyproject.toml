@@ -38,7 +38,6 @@ exclude = [
   "*.yml",
   "*.ini",
   "*.toml",
-  "*.txt",
   "*.md",
   "*.iss"
 ]
