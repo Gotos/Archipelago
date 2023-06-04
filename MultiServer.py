@@ -19,7 +19,7 @@ import typing
 import weakref
 import zlib
 
-import ModuleUpdate
+from . import ModuleUpdate
 
 ModuleUpdate.update()
 
@@ -34,10 +34,10 @@ try:
 except ImportError:
     OperationalError = ConnectionError
 
-import NetUtils
-import Utils
-from Utils import version_tuple, restricted_loads, Version, async_start
-from NetUtils import Endpoint, ClientStatus, NetworkItem, decode, encode, NetworkPlayer, Permission, NetworkSlot, \
+from . import NetUtils
+from . import Utils
+from .Utils import version_tuple, restricted_loads, Version, async_start
+from .NetUtils import Endpoint, ClientStatus, NetworkItem, decode, encode, NetworkPlayer, Permission, NetworkSlot, \
     SlotType
 
 min_client_version = Version(0, 1, 6)

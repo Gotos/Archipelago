@@ -17,11 +17,11 @@ from . import Utils
 if __name__ == "__main__":
     Utils.init_logging("TextClient", exception_logger="Client")
 
-from MultiServer import CommandProcessor
-from NetUtils import Endpoint, decode, NetworkItem, encode, JSONtoTextParser, \
+from .MultiServer import CommandProcessor
+from .NetUtils import Endpoint, decode, NetworkItem, encode, JSONtoTextParser, \
     ClientStatus, Permission, NetworkSlot, RawJSONtoTextParser
-from Utils import Version, stream_input, async_start
-from worlds import network_data_package, AutoWorldRegister
+from .Utils import Version, stream_input, async_start
+from .worlds import network_data_package, AutoWorldRegister
 import os
 
 if typing.TYPE_CHECKING:

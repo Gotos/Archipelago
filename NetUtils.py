@@ -6,7 +6,7 @@ from json import JSONEncoder, JSONDecoder
 
 import websockets
 
-from Utils import ByValue, Version
+from .Utils import ByValue, Version
 
 
 class JSONMessagePart(typing.TypedDict, total=False):
