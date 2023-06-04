@@ -1361,6 +1361,6 @@ def get_seed(seed: Optional[int] = None) -> int:
     return seed
 
 
-from worlds import AutoWorld
+from .worlds import AutoWorld
 
 auto_world = AutoWorld.World
