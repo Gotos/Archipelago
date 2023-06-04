@@ -23,15 +23,12 @@ dependencies = [
   "six >= 1.16.0",
   "apsc2 >= 5.6",
   "bsdiff4>=1.2.2",
-  "zilliandomizer @ git+https://github.com/beauxq/zilliandomizer@cd6a940ad7b585c75a560b91468d6b9eee030559#0.5.2"
+  "pip>=20.2.3"
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.hatch.metadata]
-allow-direct-references = true
 
 [tool.hatch.build.sources]
 "." = "archipelago"
