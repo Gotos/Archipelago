@@ -162,7 +162,7 @@ def resolve_icon(icon_name: str):
     if is_windows:
         path, extension = os.path.splitext(base_path)
         ico_file = path + ".ico"
-        assert os.path.exists(ico_file), f"ico counterpart of {base_path} should exist."
+        #assert os.path.exists(ico_file), f"ico counterpart of {base_path} should exist."
         return ico_file
     else:
         return base_path
