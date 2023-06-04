@@ -4,6 +4,17 @@ version = "0.0.1"
 readme = "README.md"
 requires-python = ">=3.7"
 description = ""
+dependencies = [
+  "colorama>=0.4.5",
+  "websockets>=11.0.3",
+  "PyYAML>=6.0",
+  "jellyfish>=0.11.2",
+  "jinja2>=3.1.2",
+  "schema>=0.7.5",
+  "kivy>=2.2.0",
+  "bsdiff4>=1.2.3",
+  "platformdirs>=3.5.1"
+]
 
 [build-system]
 requires = ["hatchling"]
