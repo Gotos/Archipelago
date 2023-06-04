@@ -29,7 +29,6 @@ packages = ["."]
 exclude = [
   "/.github",
   "/docs",
-  "/data",
   "**/test/**",
   "/setup.py",
   "/.gitignore",
