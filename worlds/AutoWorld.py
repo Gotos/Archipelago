@@ -7,8 +7,8 @@ import sys
 from typing import Any, Callable, ClassVar, Dict, FrozenSet, List, Optional, Set, TYPE_CHECKING, TextIO, Tuple, Type, \
     Union
 
-from BaseClasses import CollectionState
-from Options import AssembleOptions
+from ..BaseClasses import CollectionState
+from ..Options import AssembleOptions
 
 if TYPE_CHECKING:
     from BaseClasses import MultiWorld, Item, Location, Tutorial

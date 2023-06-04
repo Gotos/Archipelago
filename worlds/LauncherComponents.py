@@ -1,7 +1,7 @@
 from enum import Enum, auto
 from typing import Optional, Callable, List, Iterable
 
-from Utils import local_path, is_windows
+from ..Utils import local_path, is_windows
 
 
 class Type(Enum):
