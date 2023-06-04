@@ -7,7 +7,7 @@ os.environ["KIVY_NO_FILELOG"] = "1"
 os.environ["KIVY_NO_ARGS"] = "1"
 os.environ["KIVY_LOG_ENABLE"] = "0"
 
-import Utils
+from . import Utils
 if Utils.is_frozen():
     os.environ["KIVY_DATA_DIR"] = Utils.local_path("data")
 
@@ -49,11 +49,11 @@ from kivy.uix.popup import Popup
 fade_in_animation = Animation(opacity=0, duration=0) + Animation(opacity=1, duration=0.25)
 
 
-from NetUtils import JSONtoTextParser, JSONMessagePart, SlotType
-from Utils import async_start
+from .NetUtils import JSONtoTextParser, JSONMessagePart, SlotType
+from .Utils import async_start
 
 if typing.TYPE_CHECKING:
-    import CommonClient
+    from . import CommonClient
 
     context_type = CommonClient.CommonContext
 else:
