@@ -7,7 +7,6 @@ import sys
 from typing import Any, Callable, ClassVar, Dict, FrozenSet, List, Optional, Set, TYPE_CHECKING, TextIO, Tuple, Type, \
     Union
 
-from ..BaseClasses import CollectionState
 from ..Options import AssembleOptions
 
 if TYPE_CHECKING:
@@ -65,6 +64,8 @@ class AutoWorldRegister(type):
 
 class AutoLogicRegister(type):
     def __new__(mcs, name: str, bases: Tuple[type, ...], dct: Dict[str, Any]) -> AutoLogicRegister:
+        from ..BaseClasses import CollectionState
+
         new_class = super().__new__(mcs, name, bases, dct)
         function: Callable[..., Any]
         for item_name, function in dct.items():
