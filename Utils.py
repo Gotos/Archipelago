@@ -106,8 +106,9 @@ def local_path(*path: str) -> str:
             local_path.cached_path = os.path.dirname(os.path.abspath(sys.argv[0]))
     else:
         import __main__
-        print(__file__)
-        if hasattr(__main__, "__file__") and os.path.isfile(__main__.__file__):
+        if os.path.isfile(__file__):
+            local_path.cached_path = os.path.dirname(os.path.abspath(__file__))
+        elif hasattr(__main__, "__file__") and os.path.isfile(__main__.__file__):
             # we are running in a normal Python environment
             local_path.cached_path = os.path.dirname(os.path.abspath(__main__.__file__))
         else:
